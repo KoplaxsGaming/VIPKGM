@@ -1,8 +1,5 @@
 instal()
 {
-if [ -d "/sdcard/Android/data/kgm.vip.data" ]
-then
-rm -rf /sdcard/Android/data/kgm.vip.data
 mount -o rw,remount /system
 mkdir /sdcard/Android/data/kgm.vip.data
 mkdir /sdcard/Android/data/kgm.vip.data/Global
@@ -60,17 +57,6 @@ rndata
 }
 modstart()
 {
-chmod 000 /data/data/com.tencent.ig/databases/__hs__db_issues
-chmod 000 /data/data/com.tencent.ig/databases/__hs__db_key_values
-chmod 000 /data/data/com.tencent.ig/databases/__hs__db_properties
-chmod 000 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
-chmod 000 /data/data/com.tencent.ig/databases/__hs__db_support_key_values
-chmod 000 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
-chmod 000 /data/data/com.tencent.ig/databases/__hs__db_sessions
-chmod 000 /data/data/com.tencent.ig/databases/__hs_log_store
-chmod 000 /data/data/com.tencent.ig/databases/bugly_db_
-chmod 000 /data/data/com.tencent.ig/databases/config.db
-chmod 000 /data/data/com.tencent.ig/databases/iMSDK.db
 rm -rf /data/data/com.tencent.ig/lib/libhelpshiftlistener.so
 rm -rf /data/data/com.tencent.ig/lib/libtprt.so
 rm -rf /data/data/com.tencent.ig/lib/libUE4.so
@@ -140,36 +126,6 @@ rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/Shad
 rm -rf /sdcard/Android/data/com.tencent.ig/files/vmpcloudconfig.json
 echo "Done"
 }
-repair()
-{
-cp -R /sdcard/Android/data/kgm.vip.data/Global/bLIB/* /data/data/com.tencent.ig/lib
-chmod 660 /data/data/com.tencent.ig/databases/__hs__db_issues
-chmod 660 /data/data/com.tencent.ig/databases/__hs__db_key_values
-chmod 660 /data/data/com.tencent.ig/databases/__hs__db_properties
-chmod 660 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
-chmod 660 /data/data/com.tencent.ig/databases/__hs__db_support_key_values
-chmod 660 /data/data/com.tencent.ig/databases/__hs__db_support_key_values
-chmod 660 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
-chmod 660 /data/data/com.tencent.ig/databases/__hs__db_sessions
-chmod 660 /data/data/com.tencent.ig/databases/__hs_log_store
-chmod 660 /data/data/com.tencent.ig/databases/bugly_db_
-chmod 660 /data/data/com.tencent.ig/databases/config.db
-chmod 660 /data/data/com.tencent.ig/databases/iMSDK.db
-chmod 755 /data/data/com.tencent.ig/lib/*
-chmod 000 /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11466.pak
-mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/apollo_reslist.flist /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
-mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/filelist.json /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
-mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/puffer_res.eifs /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
-mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/PufferFileList.json /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
-if [ -f "/sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11559.pak" ];
-then
-rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11559.pak
-fi
-if [ -f "/sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak" ];
-then
-rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak
-fi
-}
 instal
 echo "_  _ ____ ___  _    ____ _  _ ____ "
 echo "|_/  |  | |__] |    |__|  \/  [__  "
@@ -211,11 +167,10 @@ sleep 1
 echo "Please Wait…"
 bypass
 am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
-sleep 10
+sleep 5
 modstart
 sleep 5
 moddata
 sleep 2
 echo "Done"
 echo " U Can Exit From MT Manager Now "
-done
