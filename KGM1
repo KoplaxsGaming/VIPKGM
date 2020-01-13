@@ -1,0 +1,278 @@
+instal()
+{
+if [ -d "/sdcard/Android/data/kgm.vip.data" ]
+then
+rm -rf /sdcard/Android/data/kgm.vip.data
+
+mount -o rw,remount /system
+mkdir /sdcard/Android/data/kgm.vip.data
+mkdir /sdcard/Android/data/kgm.vip.data/Global
+mkdir /sdcard/Android/data/kgm.vip.data/Global/bDATA
+mkdir /sdcard/Android/data/kgm.vip.data/Global/bLIB
+cp -R /data/data/com.tencent.ig/lib/* /sdcard/Android/data/kgm.vip.data/Global/bLIB
+sleep 1
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data1s11.dat
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data2s11.dat
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data.dat
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data2.dat
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data3.dat
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data4.dat
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/data5.dat
+sleep 2
+mv data1s11.dat patchfilekgm
+mv data2s11.dat patchfilekgm2
+sleep 1
+mv patchfilekgm /sdcard/Android/data/kgm.vip.data/Global
+mv patchfilekgm2 /sdcard/Android/data/kgm.vip.data/Global
+mv data.dat /sdcard/Android/data/kgm.vip.data/Global
+mv data2.dat /sdcard/Android/data/kgm.vip.data/Global
+mv data3.dat /sdcard/Android/data/kgm.vip.data/Global
+mv data4.dat /sdcard/Android/data/kgm.vip.data/Global
+mv data5.dat /sdcard/Android/data/kgm.vip.data/Global
+sleep 1
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/patchfilekgm" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/patchfilekgm2" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data.dat" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data2.dat" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data3.dat" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data4.dat" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data5.dat" ];
+then
+echo ""
+echo "Installation Failed"
+echo "Data Not Found"
+echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
+exit 0;
+fi
+echo "Installasi Finished"
+}
+urdata()
+{
+mv /sdcard/Android/data/kgm.vip.data/Global/patchfilekgm /sdcard/Android/data/kgm.vip.data/Global/game_patch_0.16.5.11559.pak
+mv /sdcard/Android/data/kgm.vip.data/Global/patchfilekgm2 /sdcard/Android/data/kgm.vip.data/Global/game_patch_0.16.5.11560.pak
+mv /sdcard/Android/data/kgm.vip.data/Global/data.dat /sdcard/Android/data/kgm.vip.data/Global/libtersafe.so
+mv /sdcard/Android/data/kgm.vip.data/Global/data2.dat /sdcard/Android/data/kgm.vip.data/Global/libhelpshiftlistener.so
+mv /sdcard/Android/data/kgm.vip.data/Global/data3.dat /sdcard/Android/data/kgm.vip.data/Global/libtprt.so
+mv /sdcard/Android/data/kgm.vip.data/Global/data4.dat /sdcard/Android/data/kgm.vip.data/Global/libUE4.so
+mv /sdcard/Android/data/kgm.vip.data/Global/data5.dat /sdcard/Android/data/kgm.vip.data/Global/libzip.so
+}
+rndata()
+{
+mv /sdcard/Android/data/kgm.vip.data/Global/game_patch_0.16.5.11559.pak /sdcard/Android/data/kgm.vip.data/Global/patchfilekgm
+mv /sdcard/Android/data/kgm.vip.data/Global/game_patch_0.16.5.11560.pak /sdcard/Android/data/kgm.vip.data/Global/patchfilekgm2
+mv /sdcard/Android/data/kgm.vip.data/Global/libtersafe.so /sdcard/Android/data/kgm.vip.data/Global/data.dat
+mv /sdcard/Android/data/kgm.vip.data/Global/libhelpshiftlistener.so /sdcard/Android/data/kgm.vip.data/Global/data2.dat
+mv /sdcard/Android/data/kgm.vip.data/Global/libtprt.so /sdcard/Android/data/kgm.vip.data/Global/data3.dat
+mv /sdcard/Android/data/kgm.vip.data/Global/libUE4.so /sdcard/Android/data/kgm.vip.data/Global/data4.dat
+mv /sdcard/Android/data/kgm.vip.data/Global/libzip.so /sdcard/Android/data/kgm.vip.data/Global/data5.dat
+}
+bypass()
+{
+urdata
+cp -R /sdcard/Android/data/kgm.vip.data/Global/game_patch_0.16.5.11560.pak /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+cp -R /sdcard/Android/data/kgm.vip.data/Global/game_patch_0.16.5.11559.pak /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+rndata
+}
+modstart()
+{
+chmod 000 /data/data/com.tencent.ig/databases/__hs__db_issues
+chmod 000 /data/data/com.tencent.ig/databases/__hs__db_key_values
+chmod 000 /data/data/com.tencent.ig/databases/__hs__db_properties
+chmod 000 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
+chmod 000 /data/data/com.tencent.ig/databases/__hs__db_support_key_values
+chmod 000 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
+chmod 000 /data/data/com.tencent.ig/databases/__hs__db_sessions
+chmod 000 /data/data/com.tencent.ig/databases/__hs_log_store
+chmod 000 /data/data/com.tencent.ig/databases/bugly_db_
+chmod 000 /data/data/com.tencent.ig/databases/config.db
+chmod 000 /data/data/com.tencent.ig/databases/iMSDK.db
+rm -rf /data/data/com.tencent.ig/lib/libhelpshiftlistener.so
+rm -rf /data/data/com.tencent.ig/lib/libtprt.so
+rm -rf /data/data/com.tencent.ig/lib/libUE4.so
+rm -rf /data/data/com.tencent.ig/lib/libzip.so
+rm -rf /data/data/com.tencent.ig/lib/libtersafe.so
+sleep 1
+urdata
+cp -R /sdcard/Android/data/kgm.vip.data/Global/libtersafe.so /data/data/com.tencent.ig/lib
+cp -R /sdcard/Android/data/kgm.vip.data/Global/libhelpshiftlistener.so /data/data/com.tencent.ig/lib
+cp -R /sdcard/Android/data/kgm.vip.data/Global/libtprt.so /data/data/com.tencent.ig/lib
+cp -R /sdcard/Android/data/kgm.vip.data/Global/libUE4.so /data/data/com.tencent.ig/lib
+cp -R /sdcard/Android/data/kgm.vip.data/Global/libzip.so /data/data/com.tencent.ig/lib
+rndata
+chmod 755 /data/data/com.tencent.ig/lib/*
+chmod 000 /data/data/com.tencent.ig/lib/libgcloud.so
+chmod 000 /data/data/com.tencent.ig/lib/libBugly.so
+chmod 000 /data/data/com.tencent.ig/lib/libzlib.so
+}
+moddata()
+{
+mv /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist /sdcard/Android/data/kgm.vip.data/Global/bDATA
+mv /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json /sdcard/Android/data/kgm.vip.data/Global/bDATA
+mv /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs /sdcard/Android/data/kgm.vip.data/Global/bDATA
+mv /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json /sdcard/Android/data/kgm.vip.data/Global/bDATA
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/1375135419_47_0.16.0.11466_20191217120416_135842427_cures.ifs.res
+}
+clear()
+{
+echo ""
+echo "×××××××× [Deleting Record Files] ××××××××"
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json
+rm -rf /data/data/com.tencent.ig/app_appcache
+rm -rf /data/data/com.tencent.ig/app_bugly
+rm -rf /data/data/com.tencent.ig/cache
+rm -rf /data/data/com.tencent.ig/code_cache
+rm -rf /data/data/com.tencent.ig/app_crashrecord
+rm -rf /data/data/com.tencent.ig/databases/google_app_measurement_local.db-journal
+rm -rf /data/data/com.tencent.ig/databases/pri_tencent_analysis.db-journal
+rm -rf /data/data/com.tencent.ig/databases/tencent_analysis.db-journal
+rm -rf /data/data/com.tencent.ig/databases/xg_message.db-journal
+rm -rf /data/data/com.tencent.ig/databases/google_app_measurement_local.db
+rm -rf /data/data/com.tencent.ig/databases/pri_tencent_analysis.db
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_issues-journal
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_key_values-journal
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_sessions-journal
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_support_key_values-journal
+rm -rf /data/data/com.tencent.ig/databases/bugly_db_-journal
+rm -rf /data/data/com.tencent.ig/databases/__hs_log_store-journal
+rm -rf /data/data/com.tencent.ig/files/iMSDK
+rm -rf /data/data/com.tencent.ig/files/tss_tmp
+rm -rf /data/data/com.tencent.ig/files/ss_tmp
+rm -rf /sdcard/tencent
+rm -rf /sdcard/MidasOversea
+rm -rf /sdcard/Android/data/com.tencent.ig/cache
+rm -rf /sdcard/Android/data/com.tencent.ig/files/tbslog
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_temp
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/RoleInfo
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/RoleInfo/RoleInfo.json
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Screenshots
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/UpdateInfo
+rm -rf /sdcard/Android/data/com.tencent.ig/files/vmpcloudconfig.json
+echo "Done"
+}
+repair()
+{
+cp -R /sdcard/Android/data/kgm.vip.data/Global/bLIB/* /data/data/com.tencent.ig/lib
+chmod 660 /data/data/com.tencent.ig/databases/__hs__db_issues
+chmod 660 /data/data/com.tencent.ig/databases/__hs__db_key_values
+chmod 660 /data/data/com.tencent.ig/databases/__hs__db_properties
+chmod 660 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
+chmod 660 /data/data/com.tencent.ig/databases/__hs__db_support_key_values
+chmod 660 /data/data/com.tencent.ig/databases/__hs__db_support_key_values
+chmod 660 /data/data/com.tencent.ig/databases/__hs_db_helpshift_users
+chmod 660 /data/data/com.tencent.ig/databases/__hs__db_sessions
+chmod 660 /data/data/com.tencent.ig/databases/__hs_log_store
+chmod 660 /data/data/com.tencent.ig/databases/bugly_db_
+chmod 660 /data/data/com.tencent.ig/databases/config.db
+chmod 660 /data/data/com.tencent.ig/databases/iMSDK.db
+chmod 755 /data/data/com.tencent.ig/lib/*
+chmod 000 /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11466.pak
+mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/apollo_reslist.flist /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/filelist.json /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/puffer_res.eifs /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+mv /sdcard/Android/data/kgm.vip.data/Global/bDATA/PufferFileList.json /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+if [ -f "/sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11559.pak" ];
+then
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11559.pak
+fi
+if [ -f "/sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak" ];
+then
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak
+fi
+}
+instal
+echo "_  _ ____ ___  _    ____ _  _ ____ "
+echo "|_/  |  | |__] |    |__|  \/  [__  "
+echo "| \_ |__| |    |___ |  | _/\_ ___] "
+echo "                                   "
+echo "   ____ ____ _  _ _ _  _ ____      "
+echo "   | __ |__| |\/| | |\ | | __      "
+echo "   |__] |  | |  | | | \| |__]      "
+echo " "
+date
+echo "=========================================="
+echo "     KOPLAXS GAMING VIP VERSION S11 V3 "
+echo "This File Latest Update At 14 January 2020"
+echo "   For PUBG Mobile 0.16.5 Global Version "
+echo "=========================================="
+echo "================="
+echo "Koplaxs Gaming YT"
+echo "================="
+echo "Subcribe My Youtube"
+echo "Koplaxs Gaming"
+echo "=====||My Partner||====="
+echo "Tangan Kanan KGM"
+echo "Hack Z"
+echo " ____ ____ ____ ____ ____ ____ ____ "
+echo "||K |||o |||p |||l |||a |||x |||s ||"
+echo "||__|||__|||__|||__|||__|||__|||__||"
+echo "|/__\|/__\|/__\|/__\|/__\|/__\|/__\|"
+echo "    ____ ____ ____ ____ ____ ____      "
+echo "   ||G |||a |||m |||i |||n |||g ||     "
+echo "   ||__|||__|||__|||__|||__|||__||     "
+echo "   |/__\|/__\|/__\|/__\|/__\|/__\|     "
+echo "==============================="
+sleep 1
+echo " "
+echo "SCANNING DATA....."
+sleep 2
+echo "Starting Bypassing PUBGM GLOBAL"
+sleep 1
+echo "Please Wait…"
+bypass
+am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
+sleep 10
+modstart
+sleep 5
+moddata
+sleep 2
+echo "Done"
+echo " U Can Exit From MT Manager Now "
+done
