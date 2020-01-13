@@ -3,7 +3,6 @@ instal()
 if [ -d "/sdcard/Android/data/kgm.vip.data" ]
 then
 rm -rf /sdcard/Android/data/kgm.vip.data
-
 mount -o rw,remount /system
 mkdir /sdcard/Android/data/kgm.vip.data
 mkdir /sdcard/Android/data/kgm.vip.data/Global
@@ -30,63 +29,7 @@ mv data3.dat /sdcard/Android/data/kgm.vip.data/Global
 mv data4.dat /sdcard/Android/data/kgm.vip.data/Global
 mv data5.dat /sdcard/Android/data/kgm.vip.data/Global
 sleep 1
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/patchfilekgm" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/patchfilekgm2" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data.dat" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data2.dat" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data3.dat" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data4.dat" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-if [ ! -f "/sdcard/Android/data/kgm.vip.data/Global/data5.dat" ];
-then
-echo ""
-echo "Installation Failed"
-echo "Data Not Found"
-echo "Please Contact Creator KGM @CreatorKoplaxsGaming"
-exit 0;
-fi
-echo "Installasi Finished"
+echo "Installation Finished"
 }
 urdata()
 {
