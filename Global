@@ -11,6 +11,8 @@ echo "========================================="
 sleep 3.5 
 echo "Downloading Data, Please Wait...."
 sleep 3.5 
+mount -o rw,remount /data
+chmod +x /data
 mount -o rw,remount /system
 mkdir /storage/emulated/0/Android/data/kgm.vip.data
 mkdir /storage/emulated/0/Android/data/kgm.vip.data/Global
@@ -81,10 +83,6 @@ mv /storage/emulated/0/Android/data/kgm.vip.data/Global/KGM5.dat /storage/emulat
 sleep 1
 echo "Starting PUBG"
 sleep 5
-#mv /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist /storage/emulated/0/Android/data/kgm.vip.data/Global/bDATA
-#mv /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json /storage/emulated/0/Android/data/kgm.vip.data/Global/bDATA
-#mv /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs /storage/emulated/0/Android/data/kgm.vip.data/Global/bDATA
-#mv /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json /storage/emulated/0/Android/data/kgm.vip.data/Global/bDATA
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/1375135419_47_0.16.0.11466_20191217120416_135842427_cures.ifs.res
 am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
 sleep 7
@@ -101,10 +99,6 @@ chmod -R 755 /data/data/com.tencent.ig/lib/libUE4.so
 chmod -R 755 /data/data/com.tencent.ig/lib/libzip.so
 chmod -R 755 /data/data/com.tencent.ig/lib/libzlib.so
 echo "×××××××× [Deleting Record Files] ××××××××"
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json
 rm -rf /data/data/com.tencent.ig/app_appcache
 rm -rf /data/data/com.tencent.ig/app_bugly
 rm -rf /data/data/com.tencent.ig/cache
